@@ -1,42 +1,41 @@
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 
-import video1 from "../../assets/videos/1.mp4";
-import video2 from "../../assets/videos/2.mp4";
-import video3 from "../../assets/videos/3.mp4";
-import video4 from "../../assets/videos/4.mp4";
-import video5 from "../../assets/videos/5.mp4";
-
 const VIDEO_DATA = [
   {
     id: 1,
     title: "AW25 Anthology",
     link: "/shop",
-    video: video1,
+    video:
+      "https://www.hushpuppies.com.pk/cdn/shop/videos/c/vp/fcef470dfcf841a3a8ca53d0e48b60a0/fcef470dfcf841a3a8ca53d0e48b60a0.HD-1080p-2.5Mbps-63023769.mp4",
   },
   {
     id: 2,
     title: "Men's Collection",
     link: "/shop",
-    video: video2,
+    video:
+      "https://www.hushpuppies.com.pk/cdn/shop/videos/c/vp/b69e6fc7da51448e90803243f0b3af17/b69e6fc7da51448e90803243f0b3af17.HD-1080p-2.5Mbps-63023771.mp4",
   },
   {
     id: 3,
     title: "Women's Edit",
     link: "/shop",
-    video: video3,
+    video:
+      "https://www.hushpuppies.com.pk/cdn/shop/videos/c/vp/e28e0863a66647338232968c6e36c1cb/e28e0863a66647338232968c6e36c1cb.HD-1080p-2.5Mbps-63023770.mp4",
   },
   {
     id: 4,
     title: "Casual Heritage",
     link: "/shop",
-    video: video4,
+    video:
+      "https://www.hushpuppies.com.pk/cdn/shop/videos/c/vp/a197001501df4be1a07295454a7e76e3/a197001501df4be1a07295454a7e76e3.HD-1080p-2.5Mbps-63023767.mp4",
   },
   {
     id: 5,
     title: "Modern Minimal",
     link: "/shop",
-    video: video5,
+    video:
+      "https://www.hushpuppies.com.pk/cdn/shop/videos/c/vp/f386cd0023884dc782945493239073f5/f386cd0023884dc782945493239073f5.HD-1080p-2.5Mbps-63023768.mp4",
   },
 ];
 
