@@ -7,7 +7,7 @@ const Footer = () => {
             LEATHERSSTEP
           </h2>
           <p className="text-sm leading-relaxed">
-            Handcrafting premium leather goods since 2024. Quality you can feel,
+            Handcrafting premium leather goods since 2014. Quality you can feel,
             durability you can trust.
           </p>
         </div>
