@@ -16,7 +16,7 @@ const WhatsAppFloat = () => {
 
   return (
     <div className="fixed bottom-10 left-10 z-[100] flex items-center">
-      {/* LUXURY CONCIERGE LABEL */}
+      {/* HOVER LABEL */}
       <AnimatePresence>
         {isHovered && (
           <motion.div
@@ -24,19 +24,18 @@ const WhatsAppFloat = () => {
             animate={{ opacity: 1, x: 0, filter: "blur(0px)" }}
             exit={{ opacity: 0, x: -20, filter: "blur(8px)" }}
             transition={{ duration: 0.6, ease: [0.19, 1, 0.22, 1] }}
-            className="ml-5 px-7 py-4 bg-gradient-to-br from-zinc-900/95 to-black/95 backdrop-blur-3xl border border-amber-500/30 rounded-lg shadow-[0_35px_70px_rgba(0,0,0,0.6)] hidden md:block"
+            className="ml-5 px-6 py-3 bg-gradient-to-br from-green-700/90 to-emerald-900/90 backdrop-blur-xl border border-green-400/40 rounded-xl shadow-2xl hidden md:block"
           >
             <div className="flex flex-col items-start">
               <div className="flex items-center gap-2 mb-1">
-                <Sparkles className="w-3 h-3 text-amber-400" />
-                <span className="text-[8px] font-black text-amber-400 uppercase tracking-[0.5em]">
-                  Concierge Live
+                <Sparkles className="w-3 h-3 text-green-300" />
+                <span className="text-[9px] font-bold text-green-200 uppercase tracking-widest">
+                  Live Support
                 </span>
-                <Sparkles className="w-3 h-3 text-amber-400" />
               </div>
 
-              <p className="text-[11px] font-serif italic text-amber-100 tracking-wider">
-                "Chat with Our Leather Expert"
+              <p className="text-[12px] italic text-green-50 tracking-wide">
+                "Chat with Our Expert"
               </p>
             </div>
           </motion.div>
@@ -51,39 +50,38 @@ const WhatsAppFloat = () => {
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
         animate={{
-          y: [0, -12, 0],
+          y: [0, -10, 0],
           transition: {
-            duration: 4,
+            duration: 3,
             repeat: Infinity,
             ease: "easeInOut",
           },
         }}
-        whileHover={{ scale: 1.05, rotate: 5 }}
+        whileHover={{ scale: 1.08 }}
         whileTap={{ scale: 0.95 }}
-        className="relative flex items-center justify-center w-20 h-20 rounded-full shadow-[0_25px_50px_-12px_rgba(0,0,0,0.7)] border border-amber-500/20 overflow-hidden group"
+        className="relative flex items-center justify-center w-20 h-20 rounded-full shadow-[0_0_40px_rgba(34,197,94,0.8)] border border-green-400/50 overflow-hidden group"
       >
-        {/* BACKGROUND */}
-        <div className="absolute inset-0 bg-gradient-to-br from-amber-900/80 via-black to-black" />
+        {/* BRIGHT BACKGROUND */}
+        <div className="absolute inset-0 bg-gradient-to-br from-green-400 via-emerald-500 to-green-700" />
 
-        {/* RINGS */}
-        <div className="absolute inset-0 rounded-full border border-amber-500/30 group-hover:border-amber-400/50 transition-all duration-500" />
-        <div className="absolute inset-[3px] rounded-full border border-amber-600/20" />
+        {/* INNER RING */}
+        <div className="absolute inset-1 rounded-full border border-white/40" />
 
         {/* GLOW */}
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,_rgba(245,158,11,0.25),_transparent_70%)] opacity-60 group-hover:opacity-100 transition-opacity duration-700" />
+        <div className="absolute inset-0 bg-[radial-gradient(circle,_rgba(255,255,255,0.4),_transparent_70%)] opacity-60 group-hover:opacity-100 transition-opacity duration-500" />
 
         {/* ICON */}
         <MessageSquareText
-          className="w-8 h-8 relative z-10 text-amber-500/90 group-hover:text-amber-400 group-hover:drop-shadow-[0_0_20px_rgba(245,158,11,0.7)] transition-all duration-500"
-          strokeWidth={1.2}
+          className="w-9 h-9 relative z-10 text-white drop-shadow-[0_0_15px_rgba(255,255,255,0.9)]"
+          strokeWidth={1.3}
         />
 
-        {/* SPARKLES */}
+        {/* FLOATING SPARKLES */}
         <div className="absolute inset-0 overflow-hidden">
-          {[...Array(3)].map((_, i) => (
+          {[...Array(4)].map((_, i) => (
             <motion.div
               key={i}
-              className="absolute w-[2px] h-[2px] bg-amber-300 rounded-full"
+              className="absolute w-[3px] h-[3px] bg-white rounded-full"
               initial={{ x: "50%", y: "50%", opacity: 0 }}
               animate={{
                 x: [`${Math.random() * 100}%`, `${Math.random() * 100}%`],
@@ -93,30 +91,30 @@ const WhatsAppFloat = () => {
               transition={{
                 duration: 2 + Math.random() * 2,
                 repeat: Infinity,
-                delay: i * 0.5,
+                delay: i * 0.4,
               }}
             />
           ))}
         </div>
 
-        {/* LIGHT EFFECT */}
+        {/* LIGHT SWEEP */}
         <motion.div
-          animate={{ x: ["-100%", "200%"] }}
+          animate={{ x: ["-120%", "200%"] }}
           transition={{
-            duration: 4,
+            duration: 3,
             repeat: Infinity,
             ease: "linear",
-            repeatDelay: 3,
+            repeatDelay: 2,
           }}
-          className="absolute top-0 left-0 w-1/2 h-full bg-gradient-to-r from-transparent via-amber-100/10 to-transparent skew-x-12"
+          className="absolute top-0 left-0 w-1/2 h-full bg-gradient-to-r from-transparent via-white/30 to-transparent skew-x-12"
         />
       </motion.a>
 
-      {/* LIVE DOT */}
-      <div className="absolute top-1 left-1 flex items-center justify-center w-5 h-5 bg-black rounded-full border border-amber-500/40 z-20">
+      {/* ONLINE DOT */}
+      <div className="absolute top-1 left-1 flex items-center justify-center w-5 h-5 bg-white rounded-full border border-green-500 z-20">
         <span className="relative flex h-2 w-2">
-          <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-amber-400 opacity-75"></span>
-          <span className="relative inline-flex rounded-full h-2 w-2 bg-gradient-to-r from-amber-500 to-yellow-500"></span>
+          <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-500 opacity-75"></span>
+          <span className="relative inline-flex rounded-full h-2 w-2 bg-green-600"></span>
         </span>
       </div>
     </div>
